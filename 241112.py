@@ -20,7 +20,7 @@ for test_case in range(1, T + 1):
             b += num
     print("#%d %d" % (test_case, b), end=" \n")
 
-""" **한줄에 홀수만 읽어서추가**"""
+"""2072. 홀수만 더하기"""
 
 import sys
 sys.stdin = open("input (1).txt", "r")
