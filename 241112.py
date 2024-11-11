@@ -21,3 +21,27 @@ for test_case in range(1, T + 1):
     print("#%d %d" % (test_case, b), end=" \n")
 
 """ **한줄에 홀수만 읽어서추가**"""
+
+import sys
+sys.stdin = open("input (1).txt", "r")
+
+T = int(sys.stdin.readline())
+# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
+for test_case in range(1, T + 1):
+    # ///////////////////////////////////////////////////////////////////////////////////
+    N = int(sys.stdin.readline()) #N일
+    prices = list(map(int, sys.stdin.readline().split()))  # 각 날의 매매가 리스트
+
+    max_profit = 0 # 최대 이익 초기화
+    max_price = 0 # 최대 가격 초기화
+
+    # 뒤에서 부터 탐색
+    for price in reversed(prices):
+      if price > max_price:
+        max_price = price
+      max_profit += max_price - price
+
+    print(f'#{test_case} {max_profit}')
+    # ///////////////////////////////////////////////////////////////////////////////////
+
+"""1859. 백만 장자 프로젝트"""
