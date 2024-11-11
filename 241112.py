@@ -23,7 +23,7 @@ for test_case in range(1, T + 1):
 """2072. 홀수만 더하기"""
 
 import sys
-sys.stdin = open("input (1).txt", "r")
+sys.stdin = open("input(1).txt", "r")
 
 T = int(sys.stdin.readline())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
@@ -42,6 +42,7 @@ for test_case in range(1, T + 1):
       max_profit += max_price - price
 
     print(f'#{test_case} {max_profit}')
+    import sys
     # ///////////////////////////////////////////////////////////////////////////////////
 
 """1859. 백만 장자 프로젝트"""
